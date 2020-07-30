@@ -1,0 +1,152 @@
+<?php //%255BApp%255CEntity%255CProductOrder%2524CLASSMETADATA%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\ProductOrder',
+            ],
+            'namespace' => [
+                'App\\Entity',
+            ],
+            'rootEntityName' => [
+                'App\\Entity\\ProductOrder',
+            ],
+            'customRepositoryClassName' => [
+                'App\\Repository\\ProductOrderRepository',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'id' => [
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'id' => true,
+                        'columnName' => 'id',
+                    ],
+                    'quantity' => [
+                        'fieldName' => 'quantity',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'quantity',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'id' => 'id',
+                    'quantity' => 'quantity',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'id' => 'id',
+                    'quantity' => 'quantity',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'product_order',
+                ],
+            ],
+            'associationMappings' => [
+                [
+                    'product' => [
+                        'fieldName' => 'product',
+                        'joinColumns' => [
+                            [
+                                'name' => 'product_id',
+                                'referencedColumnName' => 'id',
+                            ],
+                        ],
+                        'cascade' => [],
+                        'inversedBy' => 'productOrders',
+                        'targetEntity' => 'App\\Entity\\Product',
+                        'fetch' => 2,
+                        'type' => 2,
+                        'mappedBy' => null,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'App\\Entity\\ProductOrder',
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'product_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'product_id' => 'product_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'product_id',
+                        ],
+                        'orphanRemoval' => false,
+                    ],
+                    'cde' => [
+                        'fieldName' => 'cde',
+                        'joinColumns' => [
+                            [
+                                'name' => 'cde_id',
+                                'unique' => false,
+                                'nullable' => false,
+                                'onDelete' => null,
+                                'columnDefinition' => null,
+                                'referencedColumnName' => 'id',
+                            ],
+                        ],
+                        'cascade' => [],
+                        'inversedBy' => 'productOrders',
+                        'targetEntity' => 'App\\Entity\\Order',
+                        'fetch' => 2,
+                        'type' => 2,
+                        'mappedBy' => null,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'App\\Entity\\ProductOrder',
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'cde_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'cde_id' => 'cde_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'cde_id',
+                        ],
+                        'orphanRemoval' => false,
+                    ],
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

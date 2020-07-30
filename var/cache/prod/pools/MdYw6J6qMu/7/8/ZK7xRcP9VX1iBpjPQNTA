@@ -1,0 +1,22 @@
+<?php //%255BApp%255CEntity%255CProduct%255C%2524GEDMO_SLUGGABLE_CLASSMETADATA%255D%255B1%255D
+
+return [PHP_INT_MAX, [
+    'slugs' => [
+        'slug' => [
+            'fields' => [
+                'title',
+            ],
+            'slug' => 'slug',
+            'style' => 'default',
+            'dateFormat' => 'Y-m-d-H:i',
+            'updatable' => true,
+            'unique' => true,
+            'unique_base' => null,
+            'separator' => '-',
+            'prefix' => '',
+            'suffix' => '',
+            'handlers' => [],
+        ],
+    ],
+    'useObjectClass' => 'App\\Entity\\Product',
+]];
